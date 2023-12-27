@@ -9,7 +9,7 @@ import Home from "./pages/home/Home";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Details from "./pages/details/Details";
 import Explore from "./pages/explore/Explore";
-import pageNotFound from "./pages/404/pageNotFound";
+import PageNotFound from "./pages/404/PageNotFound";
 function App() {
   const dispatch=useDispatch();
   const {url} = useSelector((state)=>state.home);
@@ -56,7 +56,7 @@ function App() {
           <Route path ="/:mediaType/:id" element={<Details/>}/>
           <Route path ="/search/:query" element={<SearchResult/>}/>
           <Route path ="/explore/:mediaType" element={<Explore/>}/>
-          <Route path="*" element={<pageNotFound/>}/>
+          <Route path="*" element={<PageNotFound/>}/>
         </Routes>
         <Footer/>
        </BrowserRouter>
